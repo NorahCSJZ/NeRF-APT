@@ -1,0 +1,15 @@
+{
+    "lr": {
+        "_type": "uniform",
+        "_value": [1e-4, 5e-3]
+    },
+    "wd": {
+        "_type": "uniform",
+        "_value": [1e-6, 1e-5]
+    },
+    "em": {
+        "_type": "uniform",
+        "_value": [1e-7, 5e-6]
+    }
+}
+
