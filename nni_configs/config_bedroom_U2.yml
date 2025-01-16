@@ -1,0 +1,13 @@
+experimentName: nni_example
+trialConcurrency: 1
+maxTrialNumber: 100
+searchSpaceFile: search_space.json
+trialCommand: python nerf2_runner.py --m unet2 --config configs/newrf_bedroom_U2.yml --dataset_type mimo --gpu 0 --mode train --n nni
+trialCodeDirectory: .
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: minimize
+trainingService:
+  platform: local
+  gpuIndices: [0, 1, 2, 3]
